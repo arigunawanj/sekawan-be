@@ -4,7 +4,7 @@ Laravel API untuk **pemesanan kendaraan** dengan **approval berjenjang (min 2 le
 
 ## Tech Stack & Versi
 
-- **PHP**: `^8.2`
+- **PHP**: `^8.4`
 - **Framework**: Laravel **12**
 - **Auth**: Laravel Sanctum (token)
 - **Database**: default **SQLite** (`database/database.sqlite`)
@@ -46,6 +46,13 @@ php artisan serve
 ```
 
 API default: `http://127.0.0.1:8000`
+
+## Catatan Production (CORS)
+
+Agar frontend production `https://sekawan.arigunawanj.com` tidak terkena CORS saat memanggil API `https://gold-marten-855204.hostingersite.com/api`, pastikan environment backend diset:
+
+- `FRONTEND_URL=https://sekawan.arigunawanj.com`
+  - atau gunakan multi origin: `CORS_ALLOWED_ORIGINS=https://sekawan.arigunawanj.com,http://localhost:3000`
 
 ## Endpoint Utama (ringkas)
 
